@@ -36,7 +36,8 @@ void to_black(cv::Mat& _art, cv::Mat& _image){
 }
 
 void _AdamHands(cv::Mat& _image){
-    cv::Mat _art = get_painting(AdamHands);
+    std::string _path = "/Users/NellyVardanyan/ACA/filter2/art/rain-texture-on-black-background-vector-31712235.jpg";
+    cv::Mat _art =  cv::imread(rain_path);
     to_black(_art, _image);
     regulate_size(_art, _image);
     cv::addWeighted(_image, 0.7, _art, 0.5, 0.0, _image);
